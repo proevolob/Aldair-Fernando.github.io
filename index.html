@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Universo para Guise 🌸</title>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background: radial-gradient(ellipse at top, #1a1a40, #000);
+      color: #fff;
+      overflow-x: hidden;
+    }
+    h1 {
+      font-size: 3em;
+      color: #ff6f91;
+      text-align: center;
+      margin-top: 60px;
+      animation: fadeInDown 1s ease-in-out;
+    }
+    p {
+      max-width: 800px;
+      margin: 20px auto;
+      text-align: center;
+      line-height: 1.6;
+      font-size: 1.2em;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(255, 111, 145, 0.2);
+      padding: 30px;
+      margin: 40px auto;
+      max-width: 850px;
+      transition: transform 0.3s;
+      animation: fadeInUp 1.2s ease;
+    }
+    .card:hover {
+      transform: scale(1.02);
+    }
+    .hearts {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+    }
+    .hearts i {
+      position: absolute;
+      color: #ff6f91;
+      animation: floatHeart linear infinite;
+    }
+    @keyframes floatHeart {
+      0% { transform: translateY(100vh) scale(0.5); opacity: 0.6; }
+      100% { transform: translateY(-10vh) scale(1); opacity: 0; }
+    }
+    @keyframes fadeInUp {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInDown {
+      0% { opacity: 0; transform: translateY(-20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+    iframe {
+      border: none;
+      border-radius: 10px;
+      margin-top: 20px;
+      width: 100%;
+      max-width: 600px;
+      height: 315px;
+    }
+    a {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #ff6f91;
+      color: white;
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.3s;
+    }
+    a:hover {
+      background: #ff3f6c;
+    }
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      padding: 40px 20px;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="hearts" id="hearts"></div>
+
+  <h1>Hola Guise 🌸</h1>
+  <p>Este es un pequeño detalle que te lo debía, hecho con cariño para ti.<br>Gracias por existir, por tu esencia, y por lo que transmites.</p>
+
+  <div class="card">
+    <h2>✨ Un gusto conocerte</h2>
+    <p>Conocerte fue como una brisa tranquila en medio del caos. Algo natural, suave y especial. Me encantaría seguir compartiendo momentos, incluso los más simples.</p>
+  </div>
+
+  <div class="card">
+    <h2>💖 Lo que transmites</h2>
+    <p>Tu forma de hablar, tu vibra, tu mirada... cada detalle deja una huella. No cualquiera ilumina así. Hay algo muy bonito en ti, Guise, y eso no pasa desapercibido.</p>
+  </div>
+
+  <div class="card">
+    <h2>🎶 Música para ti</h2>
+    <p>Te dejo una melodía para acompañar estas palabras. Si no suena, puedes abrirla directo en YouTube.</p>
+    <iframe src="https://www.youtube.com/embed/YYjv0_w_zOo?rel=0&modestbranding=1&autoplay=0&controls=1" allowfullscreen></iframe>
+    <br>
+    <a href="https://www.youtube.com/watch?v=YYjv0_w_zOo" target="_blank">Escuchar en YouTube 🔗</a>
+  </div>
+
+  <div class="card">
+    <h2>🌠 Momentos por crear</h2>
+    <p>Aún no tenemos recuerdos juntos, pero espero que muy pronto podamos compartir historias, risas y momentos felices. Esto apenas empieza.</p>
+    <img src="https://cdn.pixabay.com/photo/2021/10/08/18/49/star-6692079_1280.png" alt="estrella" style="width:120px;margin-top:15px;">
+  </div>
+
+  <footer>— Con cariño, tu fer xd 💫</footer>
+
+  <script>
+    // Corazones flotantes
+    const container = document.getElementById("hearts");
+    for (let i = 0; i < 30; i++) {
+      let heart = document.createElement("i");
+      heart.className = "fas fa-heart";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.animationDuration = (3 + Math.random() * 3) + "s";
+      heart.style.fontSize = (12 + Math.random() * 24) + "px";
+      container.appendChild(heart);
+    }
+  </script>
+  <script src="https://kit.fontawesome.com/a81368914c.js" crossorigin="anonymous"></script>
+</body>
+</html>
